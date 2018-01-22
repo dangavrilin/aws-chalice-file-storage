@@ -1,6 +1,6 @@
 # aws-chalice-file-storage
 
-A chalice based simple API for adding and removing files from AWS S3 Bucket.
+A chalice based simple API for adding and removing image files from AWS S3 Bucket.
 
 ## Setup
 
