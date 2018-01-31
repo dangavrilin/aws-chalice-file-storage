@@ -73,7 +73,7 @@ def check_params():
     return params
 
 
-@app.route('/img', methods=['GET'])
+@app.route('/v1/images', methods=['GET'])
 def get_file():
     params = check_params()
     items = get_item(params['userId'], params['collectionId'])
@@ -91,7 +91,7 @@ def get_file():
                     headers={'Content-Type': 'application/json'})
 
 
-@app.route('/img', methods=['POST'], content_types=['application/octet-stream'])
+@app.route('/v1/images', methods=['POST'], content_types=['application/octet-stream'])
 def upload_file():
     params = check_params()
     if set(params.keys()) != {'userId', 'collectionId'}:
@@ -128,7 +128,7 @@ def upload_file():
                     headers={'Content-Type': 'application/json'})
 
 
-@app.route('/img', methods=['DELETE'])
+@app.route('/v1/images', methods=['DELETE'])
 def remove_file():
     params = check_params()
 
